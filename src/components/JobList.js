@@ -12,7 +12,7 @@ class JobList extends Component {
 
         return (
             <div className="Jobs">
-                <p>Description</p>
+                <p>Venire pro haec sollicitas Parthicarum impetus taliaque taliaque pro summo.</p>
                 <ul>
                     {jobs}
                 </ul>
