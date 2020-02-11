@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
 import {NavLink} from "react-router-dom";
-import JobList from "./components/JobList";
 import PageAddJobs from "./components/PageAddJobs";
-import Home from "./components/Home";
 import {Route} from "react-router";
 import './App.scss';
-import Loading from "./components/Loading";
 import PageJobs from "./components/PageJobs";
+import Job from "./components/Job";
 
 class App extends Component {
 
@@ -31,13 +29,13 @@ class App extends Component {
         }
         return (
             <main className="main-container">
-                <h1>Dev Jobs</h1>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
                     <div className="navbar-brand">
                         <ul className="navbar">
-                            <li className="nav-link"><NavLink to="/Home">Accueil</NavLink></li>
-                            <li className="nav-link"><NavLink to="/JobList">Offres d'emploi</NavLink></li>
-                            <li className="nav-link"><NavLink to="PageAddJobs">Ajouter une offre</NavLink></li>
+                            <h1>Dev Jobs</h1>
+                                <li className="nav-link"><NavLink to="/Home">Accueil</NavLink></li>
+                                <li className="nav-link"><NavLink to="/JobList">Offres d'emploi</NavLink></li>
+                                <li className="nav-link"><NavLink to="PageAddJobs">Ajouter une offre</NavLink></li>
                         </ul>
                     </div>
                 </nav>
@@ -45,6 +43,9 @@ class App extends Component {
                     <PageJobs jobs={this.state.jobs}/>
                 </Route>
                 <Route path="/PageAddJobs" component={PageAddJobs}/>
+                <Route path="/Job/:identifiant">
+                    <Job/>
+                </Route>
             </main>
         );
     }

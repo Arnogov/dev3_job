@@ -7,9 +7,11 @@ class PageJobs extends Component {
         const {jobs} = this.props;
 
         return (
-            <div>
+            <div className="List">
+
                 <h1>Liste des offres</h1>
                 <JobList jobs={jobs}/>
+
             </div>
         );
     }
