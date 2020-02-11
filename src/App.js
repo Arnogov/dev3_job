@@ -20,6 +20,7 @@ class App extends Component {
         fetch('http://127.0.0.1:8000/api/jobs')
             .then(response => response.json())
             .then(data => this.setState({jobs: data["hydra:member"], loading: false}))
+
     }
 
     render() {
@@ -35,7 +36,7 @@ class App extends Component {
                             <h1>Dev Jobs</h1>
                                 <li className="nav-link"><NavLink to="/Home">Accueil</NavLink></li>
                                 <li className="nav-link"><NavLink to="/JobList">Offres d'emploi</NavLink></li>
-                                <li className="nav-link"><NavLink to="PageAddJobs">Ajouter une offre</NavLink></li>
+                                <li className="nav-link"><NavLink to="/PageAddJobs">Ajouter une offre</NavLink></li>
                         </ul>
                     </div>
                 </nav>

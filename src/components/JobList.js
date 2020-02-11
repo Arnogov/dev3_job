@@ -6,11 +6,6 @@ class JobList extends Component {
 
     state = {job:{}}
 
-    AddView(job) {
-
-    }
-
-
     render() {
         if (this.props.jobs.length === 0) {
             return <div>Chargement en cours...</div>
