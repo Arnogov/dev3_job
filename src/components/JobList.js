@@ -11,16 +11,16 @@ class JobList extends Component {
             return <div>Chargement en cours...</div>
         }
         const jobs = this.props.jobs.map((job, key) =>
-            <li key={key}><JobCard job={job}/>
+            <div key={key}><JobCard job={job}/>
 
-            </li>);
+            </div>);
 
         return (
             <div className="Jobs">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <ul>
+                <div>
                     {jobs}
-                </ul>
+                </div>
             </div>
         );
     }

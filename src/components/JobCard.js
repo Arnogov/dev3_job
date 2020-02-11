@@ -7,15 +7,16 @@ class JobCard extends Component {
     render() {
 
         const {job} = this.props;
-        const skills = this.props.job.skills.map(skill => <li key={skill.id}>{skill.name}</li>);
+        const skills = this.props.job.skills.map(skill => <span className="badge badge-success"><div key={skill.id}>{skill.name}</div></span>);
+
 
         return (
             <div>
                 <h2>{job.title}</h2>
-                <p>{job.company}</p>
-                <ul>{skills}</ul>
+                <span className="badge badge-primary"><p>{job.company}</p></span>
+                <div>{skills}</div>
                 <p>Offre ajoutée le {moment(this.props.createdAt).format("Do MMMM YYYY")}</p>
-                <a href={"Job/"+job.id}>  Voir plus  </a>
+                <a href={"Job/"+job.id}><img src="oeil.png" alt="oeil"/></a>
             </div>
         );
     }

@@ -29,10 +29,12 @@ class App extends Component {
             return <loading/>
         }
         return (
+           <div class="container">
             <main className="main-container">
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
                     <div className="navbar-brand">
                         <ul className="navbar">
+                            <img src="dev.jpg" width="80px"/>
                             <h1>Dev Jobs</h1>
                                 <li className="nav-link"><NavLink to="/Home">Accueil</NavLink></li>
                                 <li className="nav-link"><NavLink to="/JobList">Offres d'emploi</NavLink></li>
@@ -47,7 +49,10 @@ class App extends Component {
                 <Route path="/Job/:identifiant">
                     <Job/>
                 </Route>
+
             </main>
+           </div>
+
         );
     }
 }

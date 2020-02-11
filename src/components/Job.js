@@ -27,18 +27,18 @@ class Job extends Component {
             return <div>Chargement en cours</div>;
         }
 
-        const skills = this.state.job.skills.map(skill => <li key={skill.id}>{skill.name}</li>);
+        const skills = this.state.job.skills.map(skill => <span className="badge badge-success"><div key={skill.id}>{skill.name}</div></span>);
 
         return (
             <div>
                 <h1>{this.state.job.title}</h1>
 
                 <div>
-                    <li>Offre ajoutée le {moment(this.props.createdAt).format("Do MMMM YYYY")}</li>
-                    <li>Voir l'offre : {this.state.job.company}</li>
-                    <li>{this.state.job.url}</li>
-                    {this.state.job.description}
-                    {skills}
+                    <p>Offre ajoutée le {moment(this.props.createdAt).format("Do MMMM YYYY")}</p>
+                    <span className="badge badge-primary"><p>{this.state.job.company}</p></span>
+                    <p>Voir l'offre : {this.state.job.url}</p>
+                    <p>{this.state.job.description}</p>
+                    <div>{skills}</div>
                 </div>
             </div>
         );
