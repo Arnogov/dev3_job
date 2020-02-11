@@ -11,5 +11,3 @@ class PageAddJobs extends Component {
         );
     }
 }
-
-export default PageAddJobs;
