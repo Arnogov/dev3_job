@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {  withRouter } from "react-router";
+import {withRouter} from "react-router";
 import moment from "moment";
 
 
@@ -16,21 +16,23 @@ class Job extends Component {
 
     componentDidMount() {
 
-        fetch('http://127.0.0.1:8000/api/jobs/'+this.props.match.params.identifiant)
+        fetch('http://127.0.0.1:8000/api/jobs/' + this.props.match.params.identifiant)
             .then(response => response.json())
             .then(data => this.setState({job: data, loading: false}))
     }
+
     render() {
 
 
-        if(this.state.loading) {
+        if (this.state.loading) {
             return <div>Chargement en cours</div>;
         }
 
-        const skills = this.state.job.skills.map(skill => <span className="badge badge-success"><div key={skill.id}>{skill.name}</div></span>);
+        const skills = this.state.job.skills.map(skill => <span className="badge badge-success"><div
+            key={skill.id}>{skill.name}</div></span>);
 
         return (
-            <div>
+            <div className="job" col-md-6>
                 <h1>{this.state.job.title}</h1>
 
                 <div>

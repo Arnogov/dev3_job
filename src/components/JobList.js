@@ -4,7 +4,7 @@ import JobCard from "./JobCard";
 
 class JobList extends Component {
 
-    state = {job:{}}
+    state = {job: {}}
 
     render() {
         if (this.props.jobs.length === 0) {
@@ -16,9 +16,10 @@ class JobList extends Component {
             </div>);
 
         return (
-            <div className="Jobs">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+                <div className="jobs">
                     {jobs}
                 </div>
             </div>

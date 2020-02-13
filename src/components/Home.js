@@ -4,8 +4,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <img src="dev.jpg" width="80px"/>
-                <h1>Dev Jobs</h1>
+                <h1>Bienvenue sur Dev Jobs</h1>
             </div>
         );
     }

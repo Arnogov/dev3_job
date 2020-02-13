@@ -1,4 +1,4 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 .App {
   text-align: center;
@@ -39,11 +39,6 @@
   }
 }
 
-.main-container {
-  display: inline;
-  width: 100%;
-}
-
 .navbar {
   display: flex;
   justify-content: center;
@@ -52,3 +47,7 @@
   width: 100%;
 }
 
+.job {
+  background-color: lightgrey;
+  width: 45%;
+}
